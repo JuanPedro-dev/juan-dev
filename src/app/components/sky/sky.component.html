@@ -1,0 +1,13 @@
+<main class="sky">
+  <div class="stars"></div>
+  <div class="stars-2"></div>
+  <div class="stars-3"></div>
+  @if (rocketEnable) {
+    <div class="rocket z-0">
+      <img src="img/rocket.svg" alt="astronaut " lazy />
+    </div>
+  }
+
+  <ng-content class="position-relative"></ng-content>
+
+</main>
