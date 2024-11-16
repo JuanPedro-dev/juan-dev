@@ -1,0 +1,47 @@
+
+@function random-position() {
+    @return random(100);
+  }
+  
+  @keyframes animRocket {
+    0% {
+      top: 10%;
+      left: 5%;
+      transform: rotate(0deg);
+    }
+    20% {
+      top: 70%;
+      left: 80%;
+      transform: rotate(90deg);
+    }
+    40% {
+      top: 40%;
+      left: 50%;
+      transform: rotate(180deg);
+    }
+    60% {
+      top: 80%;
+      left: 20%;
+      transform: rotate(270deg);
+    }
+    80% {
+      top: 20%;
+      left: 90%;
+      transform: rotate(360deg);
+    }
+    100% {
+      top: 10%;
+      left: 5%;
+      transform: rotate(0deg);
+    }
+  }
+  
+  .rocket {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: animRocket 40s linear infinite;
+  }
+  
