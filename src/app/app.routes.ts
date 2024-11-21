@@ -2,14 +2,14 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
   {
-    path: 'welcome',
+    path: 'language',
     loadComponent: () =>
-      import('./pages/welcome/welcome.component').then(m => m.WelcomeComponent),
+      import('./pages/language/language.component').then(m => m.LanguageComponent),
   },
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'welcome',
+    redirectTo: 'language',
   },
   {
     path: '**',

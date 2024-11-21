@@ -1,0 +1,49 @@
+<app-sky [rocketEnable]="false">
+  <section class="h-full flex flex-nowrap justify-center items-center">
+    <div class="bg-slate-400 p-5 rounded-lg">
+      <h2 class="text-center font-extrabold text-3xl leading-tight" i18n>Start the mission</h2>
+
+      <div class="flex justify-center items-center p-4">
+        <div class="relative">
+          <button
+            (click)="toggleDropdown()"
+            class="flex justify-center items-center gap-2 px-4 py-2 text-gray-700 bg-white rounded-lg border border-gray-200 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            [class.shadow-sm]="isOpen">
+            <img class="max-w-4" src="img/planet-earth.svg" alt="planet earth" lazy />
+
+            <span>Select Language</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-4 h-4 text-gray-500 transition-transform duration-200"
+              [class.rotate-180]="isOpen"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          @if (isOpen) {
+            <div
+              class="absolute fill z-10 mt-2 bg-white rounded-lg shadow-lg border border-gray-200 py-1"
+              (clickOutside)="closeDropdown()">
+              @for (lang of languages; track lang.code) {
+                <a
+                  [href]="lang.href"
+                  class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors">
+                  {{ lang.name }}
+                </a>
+              }
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="center">
+        <img src="img/astronaut-language.webp" alt="astronaut" lazy />
+      </div>
+    </div>
+
+    <img class="p-5 max-w-28 rotate-45 position" src="img/rocket.svg" alt="astronaut" lazy />
+  </section>
+</app-sky>
