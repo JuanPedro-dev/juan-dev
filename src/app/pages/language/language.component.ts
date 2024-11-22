@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { SkyComponent } from '@app/components/sky/sky.component';
 
 interface Language {
@@ -10,7 +11,7 @@ interface Language {
 @Component({
   selector: 'app-language',
   standalone: true,
-  imports: [SkyComponent],
+  imports: [SkyComponent, RouterLink],
   templateUrl: './language.component.html',
   styleUrl: './language.component.scss',
 })
