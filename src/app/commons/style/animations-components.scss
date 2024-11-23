@@ -1,0 +1,48 @@
+// ****************************** shadow-pulse ******************************
+
+.shadow-pulse {
+  animation: shadow-pulse 2s infinite;
+  cursor: pointer;
+}
+
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0px 0px 0px 0px hsl(214, 72%, 62%);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 15px #94a3b8;
+  }
+}
+
+// ****************************** vibrate ******************************
+
+.vibrate {
+  transition: all 0.3s ease;
+  animation: vibrate 3s linear infinite;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translateX(0px);
+  }
+  40% {
+    transform: translateX(-1px);
+  }
+  45% {
+    transform: translateX(1px);
+  }
+  50% {
+    transform: translateX(-2px);
+  }
+  55% {
+    transform: translateX(2px);
+  }
+  60% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+// ****************************** vibrate ******************************

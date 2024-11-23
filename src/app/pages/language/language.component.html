@@ -1,5 +1,5 @@
 <app-sky [rocketEnable]="false">
-  <section class="h-full flex-center flex-nowrap">
+  <section id="animatedBox" class="h-full flex-center flex-nowrap">
     <div class="bg-slate-400 p-5 rounded-lg">
       <h2 class="text-center font-extrabold text-3xl leading-tight" i18n>Start the mission</h2>
 
@@ -42,10 +42,10 @@
       <div class="flex-center flex-col">
         <img src="img/astronaut-language.webp" alt="astronaut" lazy />
         <button
-          class="group relative inline-flex border border-blue-600 focus:outline-none w-full sm:w-auto cursor-pointer"
-          routerLink="/select-mission">
+          (click)="selectLanguage()"
+          class="shadow-pulse group relative inline-flex border border-blue-600 focus:outline-none w-full sm:w-auto cursor-pointer">
           <span
-            class="vibrate w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-blue-600 text-center font-bold uppercase bg-white ring-1 ring-blue-600 ring-offset-1 transform transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1"
+            class="w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-blue-600 text-center font-bold uppercase bg-white ring-1 ring-blue-600 ring-offset-1 transform transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1"
             i18n
             >Start</span
           >

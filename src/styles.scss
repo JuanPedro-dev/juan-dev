@@ -5,9 +5,15 @@
 
 @import '../public/font/Geist_Mono/fonts.scss';
 
+// ******************************  Animations  ******************************
 
-// Globals
-body{
+@import './app/commons/style/background.scss';
+@import './app/commons/style/rocket.scss';
+@import './app/commons/style/animations-components.scss';
+
+// ******************************  Globals  ******************************
+
+body {
   font-family: 'Geist Mono';
 }
 
