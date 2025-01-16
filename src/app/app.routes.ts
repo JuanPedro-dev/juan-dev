@@ -10,6 +10,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/select-mission/select-mission.component').then(m => m.SelectMissionComponent),
   },
   {
+    path: 'studies',
+    loadComponent: () => import('./pages/studies/studies.component').then(m => m.StudiesComponent),
+  },
+  {
     path: '',
     pathMatch: 'full',
     redirectTo: 'language',
